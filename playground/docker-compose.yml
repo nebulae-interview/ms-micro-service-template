@@ -2,14 +2,14 @@ version: "3"
 
 services:
   broker-mqtt-micro-service-template:
-    image: eclipse-mosquitto
+    image: eclipse-mosquitto:1.6.12
     ports:
       - "9001:9001"
       - "1883:1883"
     volumes:
       - NEBULAE_MQTT:/mosquitto/data            
   store-mongo-micro-service-template:
-    image: mongo:4
+    image: mongo:4.2
     ports:
       - "27017:27017"
     environment: 
